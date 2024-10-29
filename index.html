@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Public Search</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 16px;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Search</h1>
+    <form id="searchForm" action="https://www.google.com/search" method="get">
+        <input type="text" name="q" placeholder="Search Google..." required>
+        <input type="submit" value="Search">
+    </form>
 
+    <h2 id="status">Loading scripts...</h2>
+
+    <script>
+        // Arrays for the nunsourdaultozy IDs
+        var nunsourdaultozyIds = [
+           8438011,
+           8438008,
+           8438005,
+           8438002,
+           8437999,
+           8437993,
+           8437988,
+           8437983,
+           8437978,
+           8437973
+        ];
+
+
+          var domainURL = [
+              "https://vemtoutcheeg.com",
+              "https://nunsourdaultozy.net"
+        ];
+
+         // Randomly select and load one URL of Push ADv
+        var currentURL = domainURL[Math.floor(Math.random() * domainURL.length)];
+        
+        
+        // Arrays for the thubanoa IDs
+        var thubanoaIds = [
+          8438010,
+          8438007,
+          8438004,
+          8438001,
+          8437996,
+          8437991,
+          8437986,
+          8437985,
+          8437980,
+          8437977
+        ];
+
+        // Function to load nunsourdaultozy scripts
+        function loadNunsourdaultozyScript(id) {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = `${currentURL}/400/` + id;
+            script.onerror = function() {
+                console.error(`Failed to load nunsourdaultozy script: ${id}`);
+            };
+            (document.body || document.documentElement).appendChild(script);
+        }
+
+        // Function to load thubanoa scripts
+        function loadThubanoaScript(id) {
+            var script = document.createElement('script');
+            script.async = true;
+            script.setAttribute('data-cfasync', 'false');
+            script.src = '//thubanoa.com/1?z=' + id;
+            script.onerror = function() {
+                console.error(`Failed to load thubanoa script: ${id}`);
+            };
+            (document.body || document.documentElement).appendChild(script);
+        }
+
+        // Randomly select and load one nunsourdaultozy script
+        var randomNunsourdaultozyId = nunsourdaultozyIds[Math.floor(Math.random() * nunsourdaultozyIds.length)];
+        loadNunsourdaultozyScript(randomNunsourdaultozyId);
+
+        // Randomly select and load one thubanoa script
+        var randomThubanoaId = thubanoaIds[Math.floor(Math.random() * thubanoaIds.length)];
+        loadThubanoaScript(randomThubanoaId);
+
+        // Update the h2 element to show the loaded IDs
+        document.getElementById('status').innerText = `Loaded IDs: nunsourdaultozy.net - ${randomNunsourdaultozyId} & ${currentURL}, thubanoa.com - ${randomThubanoaId}`;
+    </script>
+  V-01
+</body>
+</html>
